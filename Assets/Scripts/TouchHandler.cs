@@ -17,7 +17,7 @@ public class TouchHandler : MonoBehaviour
 
     void Start()
     {
-        swipeDistance = Screen.width * 0.05f;
+        swipeDistance = 30;
         touch = Touchscreen.current.primaryTouch;
     }
 

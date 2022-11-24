@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
-    public bool TryMove(Vector2 direction)
+    [HideInInspector] public bool canMove = true;
+
+    MoveableVisuals visuals;
+
+    void Start()
+    {
+        visuals = GetComponentInChildren<MoveableVisuals>();
+    }
+
+    public bool TryMove(Vector2 direction, bool first = true)
     {
         RaycastHit hit;
+
+        if (!canMove)
+            return false;
         if (Physics.Raycast(transform.position, new Vector3(direction.x, 0, direction.y), out hit, 1)) {
-            if (hit.collider.GetComponent<Moveable>() != null) {
-                if (!hit.collider.GetComponent<Moveable>().TryMove(direction)) {
-                    return false;
-                }
-            }
-            else {
+            if (hit.collider.GetComponent<Moveable>() == null
+                || !hit.collider.GetComponent<Moveable>().TryMove(direction, false)) {
+                if (first)
+                    StartCoroutine(visuals.BeginMoveFailAnimation(direction));
                 return false;
             }
         }
-        transform.position += new Vector3(direction.x, 0, direction.y);
+        StartCoroutine(visuals.BeginMoveAnimation(direction));
         return true;
     }
 
