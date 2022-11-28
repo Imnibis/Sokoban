@@ -17,7 +17,7 @@ public class TouchHandler : MonoBehaviour
 
     void Start()
     {
-        swipeDistance = 30;
+        swipeDistance = Mathf.Min(15, Screen.height / 0.01f);
         touch = Touchscreen.current.primaryTouch;
     }
 
