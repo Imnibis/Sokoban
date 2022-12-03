@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         if (levels.Count != 0) {
+            currentLevelIndex = PlayerPrefs.GetInt("Level", 0);
             currentLevel = levels[currentLevelIndex];
             LoadCurrentLevel();
         }
@@ -68,6 +69,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("No levels remaining");
             return;
         }
+        PlayerPrefs.SetInt("Level", currentLevelIndex);
+        PlayerPrefs.Save();
         currentLevel = levels[currentLevelIndex];
         LoadCurrentLevel();
     }

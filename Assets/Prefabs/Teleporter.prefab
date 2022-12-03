@@ -7495,11 +7495,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7656,7 +7656,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -7665,7 +7665,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -9653,8 +9653,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6840332990996045963}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.499, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.79671, y: 0.79671, z: 0.79671}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9663,7 +9663,7 @@ Transform:
   - {fileID: 7823642501347463706}
   m_Father: {fileID: 6840332992089310674}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6840332990996046069
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12410,11 +12410,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -12571,7 +12571,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -12580,7 +12580,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -17224,11 +17224,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -17385,7 +17385,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -17394,7 +17394,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -22038,11 +22038,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -22199,7 +22199,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -22208,7 +22208,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -26852,11 +26852,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -27013,7 +27013,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -27022,7 +27022,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -31666,11 +31666,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -31827,7 +31827,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -31836,7 +31836,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -33845,8 +33845,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.038776994, z: 0.8}
-  m_Center: {x: 0, y: -0.49, z: 0}
+  m_Size: {x: 0.8, y: 0.8, z: 0.03877699}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &71991649945439560
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33878,6 +33878,7 @@ MonoBehaviour:
   teleportParticles: {fileID: 3414754324556689899}
   otherTeleporter: {fileID: 0}
   teleportDelay: 0.2
+  overlappingMoveable: {fileID: 0}
 --- !u!1 &6840332992186794172
 GameObject:
   m_ObjectHideFlags: 0
@@ -36559,11 +36560,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -36720,7 +36721,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -36729,7 +36730,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -41373,11 +41374,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.21
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -41534,7 +41535,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 4.61
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -41543,7 +41544,7 @@ ParticleSystem:
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.66
       minScalar: 0
       maxCurve:
         serializedVersion: 2
