@@ -17,7 +17,7 @@ public class TiledFloor : MonoBehaviour
     void Update()
     {
         if (renderer) {
-            renderer.sharedMaterial.mainTextureScale = new Vector2(transform.localScale.x / 2, transform.localScale.y / 2);
+            renderer.material.mainTextureScale = new Vector2(transform.localScale.x / 2, transform.localScale.y / 2);
         }
     }
 }

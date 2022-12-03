@@ -12,6 +12,7 @@ public class Button : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        gameManager.RegisterButton(this);
     }
 
     public void Trigger()

@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/level1.unity
     guid: 48107e1df325d3041855c0cc5ef179ed
+  - enabled: 1
+    path: Assets/Scenes/Levels/level2.unity
+    guid: 948f12126e6c76d45987e0646a451f27
+  - enabled: 1
+    path: Assets/Scenes/Levels/level3.unity
+    guid: 86a31d2016de8624994b374f18b876f3
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: a3734a2ff1438064ea4f0899ab1295d1,
       type: 2}
