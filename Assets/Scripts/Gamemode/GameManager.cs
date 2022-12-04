@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public int currentLevelIndex;
     public Level currentLevel;
 
+    string forcedScene = null;
+    bool forcedSceneAdditive = false;
+
     LevelTransitionPhase levelTransitionPhase = LevelTransitionPhase.None;
 
     void Start()
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
         if (levels.Count != 0) {
             currentLevelIndex = PlayerPrefs.GetInt("Level", 0);
             currentLevel = levels[currentLevelIndex];
+            forcedScene = null;
             LoadCurrentLevel();
         }
     }
@@ -55,7 +59,22 @@ public class GameManager : MonoBehaviour
         Debug.Log("All buttons were pressed");
         levelFinishedUI.onAfterHide += BeginSceneTransition;
         levelTransitionPhase = LevelTransitionPhase.LevelFinishedAnimation;
+        forcedScene = null;
         StartCoroutine(levelFinishedUI.Show());
+    }
+
+    public void Restart()
+    {
+        forcedSceneAdditive = true;
+        buttons.Clear();
+        TransitionToScene(currentLevel.sceneName);
+    }
+
+    public void TransitionToScene(string scene)
+    {
+        levelTransitionPhase = LevelTransitionPhase.LevelFinishedAnimation;
+        forcedScene = scene;
+        BeginSceneTransition();
     }
 
     void BeginSceneTransition()
@@ -83,7 +102,19 @@ public class GameManager : MonoBehaviour
         if (levelTransitionPhase != LevelTransitionPhase.UnloadingScene)
             return;
         SceneManager.sceneUnloaded -= OnLevelUnloaded;
-        LoadNextLevel();
+        if (forcedScene != null && forcedSceneAdditive) {
+            levelTransitionPhase = LevelTransitionPhase.None;
+            SceneManager.sceneLoaded += OnLevelLoaded;
+            SceneManager.LoadSceneAsync(forcedScene, LoadSceneMode.Additive);
+            forcedScene = null;
+            forcedSceneAdditive = false;
+        }
+        else if (forcedScene != null) {
+            SceneManager.LoadSceneAsync(forcedScene);
+        }
+        else {
+            LoadNextLevel();
+        }
     }
 
     public void LoadNextLevel()

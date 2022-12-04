@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(RectTransform))]
-[ExecuteInEditMode]
 public class SceneTransitionUI : MonoBehaviour
 {
     RectTransform rectTransform;
