@@ -11,8 +11,7 @@ public class SceneTransitionUI : MonoBehaviour
     public float hiddenOffset = 3500f;
     public AfterSceneTransitionShowCallback onAfterShow;
     public AfterSceneTransitionHideCallback onAfterHide;
-    public bool shown = false;
-    bool wasShown = false;
+    public bool autoHideOnStart = false;
 
     public delegate void AfterSceneTransitionShowCallback();
     public delegate void AfterSceneTransitionHideCallback();
@@ -20,18 +19,8 @@ public class SceneTransitionUI : MonoBehaviour
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-    }
-
-    private void Update()
-    {
-        if (shown != wasShown) {
-            wasShown = shown;
-            if (shown) {
-                StartCoroutine(Show());
-            }
-            else {
-                StartCoroutine(Hide());
-            }
+        if (autoHideOnStart) {
+            StartCoroutine(Hide());
         }
     }
 

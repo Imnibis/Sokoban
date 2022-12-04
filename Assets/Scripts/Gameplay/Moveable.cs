@@ -1,9 +1,13 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
+    public float movementCooldown = 0;
+    [HideInInspector] public float movementTimer = 0;
+    [HideInInspector] public bool movementTimerCountingDown = false;
     [HideInInspector] public bool canMove = true;
 
     MoveableVisuals visuals;
@@ -13,11 +17,22 @@ public class Moveable : MonoBehaviour
         visuals = GetComponentInChildren<MoveableVisuals>();
     }
 
+    void Update()
+    {
+        if (movementTimerCountingDown) {
+            movementTimer -= Time.deltaTime;
+            if (movementTimer <= 0) {
+                movementTimerCountingDown = false;
+                canMove = true;
+            }
+        }
+    }
+
     public bool TryMove(Vector2 direction, bool first = true)
     {
         RaycastHit hit;
 
-        if (!canMove)
+        if (!canMove || (direction.x == 0 && direction.y == 0))
             return false;
         if (Physics.Raycast(transform.position, new Vector3(direction.x, 0, direction.y), out hit, 1)) {
             if (hit.collider.GetComponent<Moveable>() == null

@@ -7,9 +7,8 @@ public class LevelFinishedUI : MonoBehaviour
     RectTransform rectTransform;
     public float transitionTime = 0.5f;
     public AnimationCurve transitionCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+    public float waitTime = 1f;
     public AfterLevelFinishedHideCallback onAfterHide;
-    public bool shown = false;
-    bool wasShown = false;
     Vector2 originalScale;
 
     public delegate void AfterLevelFinishedHideCallback();
@@ -21,20 +20,6 @@ public class LevelFinishedUI : MonoBehaviour
         rectTransform.localScale = Vector2.zero;
     }
 
-    private void Update()
-    {
-        if (shown != wasShown) {
-            wasShown = shown;
-            if (shown) {
-                StartCoroutine(Show());
-            }
-            else {
-                StartCoroutine(Hide());
-            }
-        }
-    }
-
-
     public IEnumerator Show()
     {
         float time = 0;
@@ -45,7 +30,7 @@ public class LevelFinishedUI : MonoBehaviour
             yield return null;
         }
         rectTransform.localScale = originalScale;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(waitTime);
         StartCoroutine(Hide());
     }
 

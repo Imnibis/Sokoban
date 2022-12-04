@@ -34,10 +34,11 @@ public class MoveableVisuals : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        moveable.canMove = true;
         transform.localPosition = Vector3.zero;
         transform.localScale = Vector3.one;
         moveable.transform.position += endPosition;
+        moveable.movementTimer = moveable.movementCooldown;
+        moveable.movementTimerCountingDown = true;
     }
 
     public IEnumerator BeginMoveFailAnimation(Vector2 direction)
@@ -64,7 +65,8 @@ public class MoveableVisuals : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        moveable.canMove = true;
         transform.localPosition = Vector3.zero;
+        moveable.movementTimer = moveable.movementCooldown;
+        moveable.movementTimerCountingDown = true;
     }
 }

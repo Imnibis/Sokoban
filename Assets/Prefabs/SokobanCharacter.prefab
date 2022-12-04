@@ -49,21 +49,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586bf4808955d974885dec7b18c6f3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSwipe:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4961694506773920471}
-        m_TargetAssemblyTypeName: Moveable, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  touching: 0
+  stickPosition: {x: 0, y: 0}
+  stickDirection: {x: 0, y: 0}
+  maxStickDistance: 100
 --- !u!114 &4961694506773920471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +65,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d99a9fd7440fa49b0a762b1650f499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementCooldown: 0.25
+  movementTimer: 0
+  movementTimerCountingDown: 0
   canMove: 1
 --- !u!135 &2592750299459108531
 SphereCollider:
